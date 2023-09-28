@@ -30,8 +30,9 @@
             </div>
             <div class="slices">
                 <img 
-                v-for="game in games"
+                v-for="(game, index) in games"
                 :src="game.image" 
+                :class="{'active': counterImg === index}"
                 alt="">
             </div>
             <button

@@ -43,7 +43,7 @@ createApp({
             if(this.counterImg === this.games.length){
                 this.counterImg = 0;
             }else if(this.counterImg < 0){
-                this.counterImg === this.games.length - 1
+                this.counterImg === this.games.length - 1;
             }
         }
     },
