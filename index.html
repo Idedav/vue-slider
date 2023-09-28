@@ -16,9 +16,12 @@
 </head>
 <body>
 
-    <div class="dc-container">
+    <div id="app" class="dc-container">
 
-        <div id="app" class="caurosel">
+        <div 
+        @mouseenter="autoplay = false"
+        @mouseleave="autoplay = true" 
+        class="caurosel">
             <div class="caurosel-img">
                 <img
                 :src="games[counterImg].image" 
@@ -37,12 +40,14 @@
                 alt="">
             </div>
             <button
-            @click="nextPrev(false)" 
+            @click="nextPrev(isPrev)" 
             class="btn-top"><i class="fa-solid fa-angle-up"></i></button>
             <button 
-            @click="nextPrev(true)"
+            @click="nextPrev(!isPrev)"
             class="btn-bottom"><i class="fa-solid fa-angle-down"></i></button>
-            <button id="interval"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button 
+            @click="isPrev ? isPrev = false : isPrev = true"
+            id="interval"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
 
         
