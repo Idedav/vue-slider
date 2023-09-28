@@ -35,10 +35,10 @@
                 alt="">
             </div>
             <button
-            @click="counterImg--" 
+            @click="nextPrev(false)" 
             class="btn-top"><i class="fa-solid fa-angle-up"></i></button>
             <button 
-            @click="counterImg++"
+            @click="nextPrev(true)"
             class="btn-bottom"><i class="fa-solid fa-angle-down"></i></button>
             <button id="interval"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
