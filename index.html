@@ -30,6 +30,7 @@
             </div>
             <div class="slices">
                 <img 
+                @click="clickThumb(index)"
                 v-for="(game, index) in games"
                 :src="game.image" 
                 :class="{'active': counterImg === index}"

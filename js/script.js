@@ -45,6 +45,10 @@ createApp({
             }else if(this.counterImg < 0){
                 this.counterImg === this.games.length - 1;
             }
+        },
+
+        clickThumb(index){
+            this.counterImg = index;
         }
     },
 
